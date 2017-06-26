@@ -1,0 +1,13 @@
+// 登陆
+{
+	'type':'login',
+	'user_id':'01'
+}
+
+// 下注
+{
+	'type':'pay',
+	'room_id':'01',
+	'user_id':'0001',
+	'money':'10'
+}

@@ -1,0 +1,110 @@
+// 登陆
+// to all client
+{
+  'type':'login',
+  'room_id':'01',
+  'room_users':[
+    {
+      'user_id':'00001',
+      'client_id':'00000212121',
+      'money':'100',
+      'is_owner':'0'
+    },
+    {
+      'user_id':'00002',
+      'client_id':'00000212123',
+      'money':'100',
+      'is_owner':'0'
+    }
+  ]
+}
+
+// 三个人都进入房间
+// to all client
+{
+  'type':'begin'
+}
+
+// 有人下注
+// to all client
+{
+  'type':'pay',
+  'user_id':'0001',
+  'money':'10'
+}
+
+// 当所有人都下注完成
+// to all client
+{
+  'type':'over',
+  'resault':[
+    {
+      'user_id':'0001',
+      'cards':[2,3],
+      'win':'+12'
+    },
+    {
+      'user_id':'0002',
+      'cards':[2,3],
+      'win':'+12'
+    },{
+      'user_id':'0003',
+      'cards':[2,3],
+      'win':'+12'
+    }
+  ]
+}
+
+// 上局结束，开始下一局
+// to all client
+{
+  'type':'ready',
+  'room_id':'01',
+  'room_users':[
+    {
+      'user_id':'0001',
+      'client_id':'00000212121',
+      'money':'100',
+      'is_owner':'0'
+    },
+    {
+      'user_id':'0002',
+      'client_id':'00000212123',
+      'money':'100',
+      'is_owner':'0'
+    },
+    {
+      'user_id':'0003',
+      'client_id':'00000212123',
+      'money':'100',
+      'is_owner':'0'
+    }
+  ]
+}
+
+
+
+
+// 房间游戏信息
+{
+  '1':{
+    'room_owner':'0001',
+    'surplus_cards':[],
+    'index':'0',
+    'history':{
+      '1':[
+        'c0001':{
+          'user_id':'0001',
+          'cards':[]
+        },
+        'c0002':{
+          'user_id':'0001',
+          'cards':[]
+        }
+      ]
+    }
+  },
+  '2':{
+
+  }
+}
